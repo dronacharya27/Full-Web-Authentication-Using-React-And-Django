@@ -35,8 +35,8 @@ const PasswordReset = () => {
      
     ) :
     <div className='login'>
-       <input type="text" placeholder='Password' name='new_password' onChange={handledata}/>
-       <input type="text" placeholder='Confirm Password' name='re_new_password' onChange={handledata}/>
+       <input type="password" placeholder='Password' name='new_password' onChange={handledata}/>
+       <input type="password" placeholder='Confirm Password' name='re_new_password' onChange={handledata}/>
        <button onClick={()=>handleReset(params,navigate)}><i className="ri-arrow-right-circle-line nexticon"></i></button>
 
     </div>}

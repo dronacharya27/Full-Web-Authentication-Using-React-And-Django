@@ -34,7 +34,7 @@ const DeleteAccount = () => {
     ) :
     <div className='delete'>
     
-      <input type="text" placeholder='Password' name='current_password' onChange={handleData}/>
+      <input type="password" placeholder='Password' name='current_password' onChange={handleData}/>
       <button className='databtn deletebtn' onClick={()=>handleDelete(navigate)}>Delete Account</button>
     
     </div>

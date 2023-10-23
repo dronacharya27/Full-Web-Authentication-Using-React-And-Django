@@ -32,9 +32,9 @@ const ChangePassword = () => {
     ) :
     <div>
       <div className='login'>
-      <input type="text" placeholder='Current Password' name='current_password' onChange={handledata}/>
-       <input type="text" placeholder='New Password' name='new_password' onChange={handledata}/>
-       <input type="text" placeholder='Confirm New Password' name='re_new_password' onChange={handledata}/>
+      <input type="password" placeholder='Current Password' name='current_password' onChange={handledata}/>
+       <input type="password" placeholder='New Password' name='new_password' onChange={handledata}/>
+       <input type="password" placeholder='Confirm New Password' name='re_new_password' onChange={handledata}/>
       
        <button onClick={()=>handleChange(navigate)}><i className="ri-arrow-right-circle-line nexticon"></i></button>
 
