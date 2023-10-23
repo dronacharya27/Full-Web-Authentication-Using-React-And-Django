@@ -1,0 +1,23 @@
+.databtn{
+      
+      border-radius: 10px;
+      padding: 20px 25px;
+      background-color:#bfcfff ;
+      opacity: 0.9;
+      color: black;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+
+      
+}
+
+.deletebtn{
+    background-color: rgb(223, 71, 96);
+    opacity: 0.9;
+}
+.changebtn{
+    background-color: rgb(71, 223, 91);
+    opacity: 0.9;
+}

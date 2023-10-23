@@ -1,0 +1,11 @@
+.Container {
+   border-radius: 20px;
+    position: absolute;
+    padding: 30px 50px;
+    z-index: 1;
+    background-color:rgba(0,0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
