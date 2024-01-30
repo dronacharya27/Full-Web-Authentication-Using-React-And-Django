@@ -1,0 +1,26 @@
+.otplogin{
+    display: flex;
+   
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.otplogin button{
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    font-size: 50px;
+    color: #809fff;
+
+}
+
+.resend{
+    color: white;
+    cursor: pointer;
+}

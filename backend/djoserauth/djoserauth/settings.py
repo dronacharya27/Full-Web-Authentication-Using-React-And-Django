@@ -80,12 +80,8 @@ WSGI_APPLICATION = 'djoserauth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER':os.environ.get('DB_USER'),
-        'PASSWORD':os.environ.get('DB_PASS'),
-        'HOST':'127.0.0.1',
-        'PORT':'5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -122,9 +118,9 @@ USE_TZ = True
 
 # REST FRAMEWORK 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES':(
-        'rest_framework.permissions.IsAuthenticated',
-    ),
+    # 'DEFAULT_PERMISSION_CLASSES':(
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
        'rest_framework_simplejwt.authentication.JWTAuthentication',
         
@@ -188,8 +184,5 @@ DJOSER = {
     'TOKEN_MODEL':None,
     'SERIALIZERS' : {'user': 'account.serializers.CreateUserSerializer',
                    'user_create': 'account.serializers.CreateUserSerializer',
-
                     }
-
-
 }

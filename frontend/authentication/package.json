@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.12.1",
     "axios": "^1.5.0",
+    "jose": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-one-tap-login": "^0.1.1",
     "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.16.0",
     "react-toastify": "^9.1.3"

@@ -14,7 +14,7 @@ const Loader = () => {
     const { dispatch} = useDataContext();
     const [searchParams, setSearchParams] = useSearchParams()
     const code  = searchParams.get("code")
-
+    console.log(code)
     const navigate = useNavigate();
 useEffect(()=>{
        

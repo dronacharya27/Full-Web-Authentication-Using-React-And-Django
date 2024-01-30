@@ -10,6 +10,8 @@ import ForgotPassword from '../Login/ForgotPassword'
 import PasswordReset from '../PasswordReset/PasswordReset'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Loader from '../Loader/Loader'
+import OtpLogin from '../OtpLogin/OtpLogin'
+import OtpVerify from '../OtpLogin/OtpVerify'
 
 const Container = () => {
   return (
@@ -17,6 +19,8 @@ const Container = () => {
     <div className='Container'>
      
       <Routes>
+        <Route path='/otplogin' element={<OtpLogin/>}/>
+        <Route path='/otpverify/:uid' element={<OtpVerify/>}/>
       <Route path='/' element={<Login/>}/>
       <Route path='/s' element={ <Signup/>}/>
       

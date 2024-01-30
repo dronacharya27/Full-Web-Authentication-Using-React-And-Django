@@ -46,7 +46,10 @@ class User(AbstractBaseUser):
     is_admin = models.BooleanField(default=False)
     created_At = models.DateTimeField(auto_now_add=True)
     updated_At = models.DateTimeField(auto_now=True)
-
+    otp = models.CharField(max_length=6,null=True,blank = True)
+    otp_expiry= models.DateTimeField(null=True,blank = True)
+    max_otp_try = models.CharField(max_length=2,default=3)
+    otp_max_out = models.DateTimeField(null=True,blank = True)
     objects = UserManager()
 
     USERNAME_FIELD = "email"
