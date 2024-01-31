@@ -7,7 +7,7 @@ const Profile = () => {
     const [profiledata,setProfiledata] = useState([])
     
     const handleData= async()=>{
-        const url = 'http://dron2720.pythonanywhere.com/api/auth/users/me/'
+        const url = 'https://dron2720.pythonanywhere.com/api/auth/users/me/'
         const token = JSON.parse(localStorage.getItem('token'))
 
         try {
@@ -27,7 +27,7 @@ const Profile = () => {
     }
    
   const handleChange=async()=>{
-    const url = 'http://dron2720.pythonanywhere.com/api/auth/jwt/refresh/'
+    const url = 'https://dron2720.pythonanywhere.com/api/auth/jwt/refresh/'
     const refresh = JSON.parse(localStorage.getItem('refresh'))
     const data = {
       refresh :refresh
@@ -44,7 +44,7 @@ const Profile = () => {
     
   }
   const handleDelete=async()=>{
-    const url = 'http://dron2720.pythonanywhere.com/api/auth/jwt/refresh/'
+    const url = 'https://dron2720.pythonanywhere.com/api/auth/jwt/refresh/'
     const refresh = JSON.parse(localStorage.getItem('refresh'))
     const data = {
       refresh :refresh
