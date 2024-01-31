@@ -21,7 +21,7 @@ const initialstate = {
 
 
 
-const URL = 'http://localhost:8000/api/auth/'
+const URL = 'http://dron2720.pythonanywhere.com/api/auth/'
 const DataContextProvider=({children}) =>{
     const[error_msg,Seterror_msg]=useState([])
     const[state,dispatch]=useReducer(reducer,initialstate)
@@ -29,7 +29,7 @@ const DataContextProvider=({children}) =>{
 
 // OTP Login
 const OtpLogin = async(navigate)=>{
-    const url = 'http://127.0.0.1:8000/api/users/otp_login/'
+    const url = 'http://dron2720.pythonanywhere.com/api/users/otp_login/'
     const {email} = state
     const data = {email}
     dispatch({
@@ -75,7 +75,7 @@ const otpVerify = async(params,navigate)=>{
     const {otp} = state
     const data = {otp}
     const {uid} = params
-    const url = `http://127.0.0.1:8000/api/user/${uid}/verify_otp/`
+    const url = `http://dron2720.pythonanywhere.com/api/user/${uid}/verify_otp/`
     try {
         const {data:res} = await axios.patch(url,data)
         dispatch({
@@ -116,7 +116,7 @@ const otpResend = async(params,navigate)=>{
     const {otp} = state
     const data = {otp}
     const {uid} = params
-    const url = `http://127.0.0.1:8000/api/user/${uid}/regenerate_otp/`
+    const url = `http://dron2720.pythonanywhere.com/api/user/${uid}/regenerate_otp/`
     try {
         const {data:res} = await axios.patch(url,data)
         dispatch({
@@ -154,7 +154,7 @@ const googleLogin = async (credential,navigate)=>{
     const send_data = {
         email:email,name:name,password:aud}
     console.log(email,name,aud)
-    const url = "http://127.0.0.1:8000/api/users/google_save/"
+    const url = "http://dron2720.pythonanywhere.com/api/users/google_save/"
     try {
         const {data:res} = await axios.post(url,send_data)
         console.log(res)
@@ -174,7 +174,7 @@ const googleLogin = async (credential,navigate)=>{
         })
         const {email,name,password,re_password} = state
         const data ={email,name,password,re_password}
-        const email_check = `http://127.0.0.1:8000/api/users/verify_email/`
+        const email_check = `http://dron2720.pythonanywhere.com/api/users/verify_email/`
         const email_verify={"email":email}
         try {
             const {data:res} = await axios.post(email_check,email_verify)
