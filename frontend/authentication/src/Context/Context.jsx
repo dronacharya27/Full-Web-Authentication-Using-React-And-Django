@@ -21,7 +21,7 @@ const initialstate = {
 
 
 
-const URL = 'httpss://dron2720.pythonanywhere.com/api/auth/'
+const URL = 'https://dron2720.pythonanywhere.com/api/auth/'
 const DataContextProvider=({children}) =>{
     const[error_msg,Seterror_msg]=useState([])
     const[state,dispatch]=useReducer(reducer,initialstate)
@@ -29,7 +29,7 @@ const DataContextProvider=({children}) =>{
 
 // OTP Login
 const OtpLogin = async(navigate)=>{
-    const url = 'httpss://dron2720.pythonanywhere.com/api/users/otp_login/'
+    const url = 'https://dron2720.pythonanywhere.com/api/users/otp_login/'
     const {email} = state
     const data = {email}
     dispatch({
