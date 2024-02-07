@@ -28,7 +28,7 @@ class UserViewSet(viewsets.ModelViewSet):
             is_valid = validate_email(
                 email_address=email,
                 check_format=True,
-                check_blacklist=True,
+                check_blacklist=False,
                 check_dns=True,
                 dns_timeout=10,
                 check_smtp=True,
