@@ -31,7 +31,7 @@ useEffect(()=>{
     <>
    
     <div className='login'>
-    <div className='icon'><img src="profile.webp"/>  </div>
+    <div className='icon'><img src="logo.jpeg"/>  </div>
    <input type="text" placeholder='Name' name='name' onChange={handledata}/>
   <input type="text" placeholder='Email' name='email' style={{marginBottom:'10px'}} onChange={handledata}/>
   <input type="password" placeholder='Password' name='password' style={{marginTop:'10px'}} onChange={handledata}/>

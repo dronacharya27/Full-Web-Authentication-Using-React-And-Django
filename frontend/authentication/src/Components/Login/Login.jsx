@@ -43,7 +43,7 @@ const Login = () => {
       
         <div className="login">
           <div className="icon">
-            <img src="profile.webp" />{" "}
+            <img src="logo.jpeg" />{" "}
           </div>
       
           <input
