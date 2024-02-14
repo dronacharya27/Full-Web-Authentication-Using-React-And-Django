@@ -15,6 +15,21 @@ const handledata = (e) =>{
     })
   
 }
+const SeePassword=()=>{
+if (document.getElementById('password').type === "password"){
+  document.getElementById('password').type = "text"
+}
+else(
+  document.getElementById('password').type = "password"
+)
+if (document.getElementById('re_password').type === "password"){
+  document.getElementById('re_password').type = "text"
+}
+else(
+  document.getElementById('re_password').type = "password"
+)
+
+}
  
 useEffect(()=>{
   if (error_msg.length!=0) {
@@ -23,6 +38,7 @@ useEffect(()=>{
     })
     Seterror_msg([])
   }
+
     
   
 },[error_msg])
@@ -34,9 +50,10 @@ useEffect(()=>{
     <div className='icon'><img src="logo.jpeg"/>  </div>
    <input type="text" placeholder='Name' name='name' onChange={handledata}/>
   <input type="text" placeholder='Email' name='email' style={{marginBottom:'10px'}} onChange={handledata}/>
-  <input type="password" placeholder='Password' name='password' style={{marginTop:'10px'}} onChange={handledata}/>
+  <input type="password" placeholder='Password' id='password' name='password' style={{marginTop:'10px'}} onChange={handledata}/>
   
-  <input type="password" placeholder='Confirm Password' name='re_password' onChange={handledata}/>
+  <input type="password" placeholder='Confirm Password' id='re_password' name='re_password' onChange={handledata}/>
+  <p onClick={()=>SeePassword()} style={{cursor:'pointer'}}>Show Passwords</p>
   <Link to='/'><p style={{width:'100%',textAlign:'left', marginLeft:'5px'}}>Login Instead</p></Link>
   {state.isloading ? (
       <div className="loader">
